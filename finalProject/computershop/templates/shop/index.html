@@ -1,0 +1,240 @@
+{% extends 'shop/extender.html' %}
+{% load static %}
+{% block content %}  
+
+
+    <!-- home content -->
+    <section class="home">
+      <div class="content">
+        <h1> <span>Computer and Accessories</span>
+          <br>
+          Up To <span id="span2">50%</span> Off
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
+          <br>Lorem ipsum dolor sit amet consectetur.
+        </p>
+        <div class="btn"><button>Shop Now</button></div>
+  
+      </div>
+      <div class="img">
+        <img src="{% static 'images/banner.png' %}" alt="">
+      </div>
+    </section>
+      <!-- home content -->
+
+      
+
+      
+    <!-- product cards -->
+    <!-- product cards -->
+<div class="container" id="product-cards">
+  <h1 class="text-center">PRODUCTS</h1>
+  <div class="row" style="margin-top: 30px;">
+    {% for product in product %}
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="{{product.imageURL}}" alt="imageError">
+        <div class="card-body">
+          <h3 class="text-center">{{product.ProductName}}</h3>
+          <p class="text-center">{{product.ads}}</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2 style="display: inline-block; float: right">${{product.price}} <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'computers:product-detail' product.id %}" title="" class="btn btn-success"><i class="material-icons">Product's</i> Detail</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+  
+    <!-- other cards -->
+    <div class="container" id="other-cards">
+      <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'images/c1.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Laptop</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 50% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'images/background_2.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Your Choice</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 50% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- other cards -->
+   
+
+
+
+
+
+
+    <!-- banner -->
+    <section class="banner">
+      <div class="content">
+        <h1> <span>Accessories</span>
+          <br>
+          Up To <span id="span2">50%</span> Off
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
+          <br>Lorem ipsum dolor sit amet consectetur.
+        </p>
+        <div class="btn"><button>Shop Now</button></div>
+  
+      </div>
+      <div class="img">
+        <img src="{% static 'images/monitor.png' %}" alt="">
+      </div>
+    </section>
+    <!-- banner -->
+
+
+
+
+    <div class="container" id="product-cards">
+      <h1 class="text-center">PRODUCTS</h1>
+      <div class="row" style="margin-top: 30px;">
+        {% for product in product %}
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{{product.imageURL}}" alt="imageError">
+            <div class="card-body">
+              <h3 class="text-center">{{product.ProductName}}</h3>
+              <p class="text-center">{{product.ads}}</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2 style="display: inline-block; float: right">${{product.price}} <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'computers:product-detail' product.id %}" title="" class="btn btn-success"><i class="material-icons">Product's</i> Detail</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+
+
+
+
+    <!-- other cards -->
+    <div class="container" id="other-cards">
+      <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'images/c1.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Laptop</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 50% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'images/c3.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Gmaing Monitor</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 50% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- other cards -->
+   
+
+
+
+
+
+
+    <!-- banner -->
+    <section class="banner">
+      <div class="content">
+        <h1> <span>Gamming monitors</span>
+          <br>
+          Up To <span id="span2">50%</span> Off
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
+          <br>Lorem ipsum dolor sit amet consectetur.
+        </p>
+        <div class="btn"><button>Shop Now</button></div>
+  
+      </div>
+      <div class="img">
+        <img src="{% static 'images/monitor2.png' %}" alt="">
+      </div>
+    </section>
+    <!-- banner -->
+
+
+
+
+    <div class="container" id="product-cards">
+      <h1 class="text-center">PRODUCTS</h1>
+      <div class="row" style="margin-top: 30px;">
+        {% for product in product %}
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{{product.imageURL}}" alt="imageError">
+            <div class="card-body">
+              <h3 class="text-center">{{product.ProductName}}</h3>
+              <p class="text-center">{{product.ads}}</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2 style="display: inline-block; float: right">${{product.price}} <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <div class="card-footer">
+                <a href="{% url 'computers:product-detail' product.id %}" title="" class="btn btn-success"><i class="material-icons">Product's</i> Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+<!-- product cards -->
+
+
+
+
+
+
+
+
+
+  {% endblock content %}
